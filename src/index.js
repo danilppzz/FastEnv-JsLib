@@ -26,6 +26,9 @@ class Env {
   get(key) {
     return this.config[key];
   }
+  getAsString(key) {
+    return this.config[key].getAsString;
+  }
 }
 
 module.exports = Env;
