@@ -20,8 +20,25 @@ npm install fenv
 ```js
 const Fenv = require('fenv');
 
-const env = new Fenv({ envFilePath: '/root/.env' });
+const env = new Fenv();
 env.load();
 
 console.log(env.get('DATABASE_URL'));
+```
+
+## File Structure
+
+The .env file must be in the root path
+```md
+my-project/
+│
+├── src/
+│   ├── index.js
+│   ├── ...
+│
+├── .env [!]
+│
+├── package.json
+├── README.md
+├── LICENSE
 ```
